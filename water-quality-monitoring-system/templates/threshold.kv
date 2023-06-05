@@ -1,0 +1,93 @@
+<ThresholdScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(10)
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+
+            Label:
+                text: 'Temperature (°C):'
+                size_hint_x: None
+                width: self.texture_size[0]
+
+            TextInput:
+                id: temperature_input
+                input_filter: 'float'
+                multiline: False
+                size_hint_x: None
+                width: dp(150)
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+
+            Label:
+                text: 'pH:'
+                size_hint_x: None
+                width: self.texture_size[0]
+
+            TextInput:
+                id: ph_input
+                input_filter: 'float'
+                multiline: False
+                size_hint_x: None
+                width: dp(150)
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+
+            Label:
+                text: 'TDS (ppm):'
+                size_hint_x: None
+                width: self.texture_size[0]
+
+            TextInput:
+                id: tds_input
+                input_filter: 'float'
+                multiline: False
+                size_hint_x: None
+                width: dp(150)
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+
+            Label:
+                text: 'Recipient Email/Phone:'
+                size_hint_x: None
+                width: self.texture_size[0]
+
+            TextInput:
+                id: recipient_input
+                multiline: False
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+
+            Label:
+                text: ''
+                size_hint_x: None
+                width: self.texture_size[0]
+
+            Button:
+                text: 'Submit'
+                on_press: root.submit_thresholds(temperature_input.text, ph_input.text, tds_input.text, recipient_input.text)
+
+        BoxLayout:
+            size_hint_y: None
+            height: dp(50)
+
+            Label:
+                text: ''
+                size_hint_x: None
+                width: self.texture_size[0]
+
+            Button:
+                text: 'Back'
+                on_press: root.manager.current = 'monitoring_screen'
+

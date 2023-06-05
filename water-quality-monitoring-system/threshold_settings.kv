@@ -1,0 +1,47 @@
+<ThresholdSettingsScreen>:
+    GridLayout:
+        cols: 2
+        rows: 5
+        spacing: 10
+        padding: 10
+
+        Label:
+            text: 'Temperature Threshold:'
+        TextInput:
+            id: temp_threshold
+            hint_text: 'Enter temperature threshold'
+            multiline: False
+
+        Label:
+            text: 'Total Dissolved Solids'
+        TextInput:
+            id: tds_threshold
+            hint_text: 'Enter TDS threshold'
+            multiline: False
+
+        Label:
+            text: 'Water Level Threshold:'
+        TextInput:
+            id: level_threshold
+            hint_text: 'Enter level threshold'
+            multiline: False
+
+        Label:
+            text: 'pH Threshold Min:'
+        TextInput:
+            id: ph_threshold_min
+            hint_text: 'Enter min pH threshold'
+            multiline: False
+
+        Label:
+            text: 'pH Threshold Max:'
+        TextInput:
+            id: ph_threshold_max
+            hint_text: 'Enter max pH threshold'
+            multiline: False
+
+    Button:
+        text: 'Save Thresholds'
+        size_hint_y: None
+        height: '48dp'
+        on_press: root.save_thresholds()

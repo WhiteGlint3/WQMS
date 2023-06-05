@@ -1,0 +1,40 @@
+<CreateUserScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(10)
+        spacing: dp(10)
+
+        Label:
+            text: 'Create User'
+            font_size: dp(20)
+
+        TextInput:
+            id: username_input
+            hint_text: 'Username'
+            size_hint_y: None
+            height: dp(40)
+
+        TextInput:
+            id: password_input
+            hint_text: 'Password'
+            password: True
+            size_hint_y: None
+            height: dp(40)
+
+        TextInput:
+            id: email_input
+            hint_text: 'Email'
+            size_hint_y: None
+            height: dp(40)
+
+        TextInput:
+            id: cell_phone_input
+            hint_text: 'Cell Phone'
+            size_hint_y: None
+            height: dp(40)
+
+        Button:
+            text: 'Create'
+            size_hint_y: None
+            height: dp(40)
+            on_release: root.create_user()
